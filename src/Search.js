@@ -5,10 +5,10 @@ import MicIcon from "@material-ui/icons/Mic";
 import { Button } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
-import { actionTypes } from "./reducer";
+import { actionTypes } from "./reducer.js";
 
 function Search({ hideButtons = false }) {
-  const dispatch = useStateValue(); //hook from reducer.js, shoot action to data layer, so we can change it
+  const [{}, dispatch] = useStateValue(); //hook from reducer.js, shoot action to data layer, so we can change it
 
   const [input, setInput] = useState("");
   const history = useHistory();
