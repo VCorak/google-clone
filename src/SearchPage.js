@@ -14,7 +14,7 @@ import RoomIcon from "@material-ui/icons/Room";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 
 function SearchPage() {
-  const [{ term = "tesla" }, dispatch] = useStateValue();
+  const [{ term = "tesla" }] = useStateValue();
 
   //LIVE API CALL
   const { data } = useGoogleSearch(term);
