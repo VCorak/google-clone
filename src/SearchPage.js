@@ -82,7 +82,7 @@ function SearchPage() {
         </div>
       </div>
 
-      {term && (
+      {true && (
         <div className="searchpage__results">
           <p className="searchpage__resultcount">
             About {data?.searchInformation.formattedTotalResults} results (
