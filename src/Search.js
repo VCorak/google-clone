@@ -8,10 +8,11 @@ import { useStateValue } from "./StateProvider";
 import { actionTypes } from "./reducer";
 
 function Search({ hideButtons = false }) {
- const [term, dispatch] = useStateValue(term); //hook from reducer.js, shoot action to data layer, so we can change it
+ const [{ term }, dispatch] = useStateValue(); //hook from reducer.js, shoot action to data layer, so we can change it
   
   const [input, setInput] = useState("");
   const history = useHistory();
+  
 
   const search = (e) => {
     e.preventDefault();
@@ -21,7 +22,7 @@ function Search({ hideButtons = false }) {
    dispatch ({
       type: actionTypes.SET_SEARCH_TERM,
       term: input,
-      dispatch
+      input: term
     });
 
     //do something with input... come back and fix

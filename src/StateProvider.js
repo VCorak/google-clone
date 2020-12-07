@@ -7,7 +7,7 @@ export const StateContext = createContext();
 // InitialState means what that data layer looks like when app is loaded
 //Reducer listens to changes maded in data layer
 export const StateProvider = ({ reducer, initialState, children }) => (
-  <StateContext.Provider value={useReducer(reducer, initialState)}>
+  <StateContext.Provider value = {useReducer(reducer, initialState)}>
     {children}
   </StateContext.Provider>
 );
